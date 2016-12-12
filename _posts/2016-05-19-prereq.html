@@ -1,0 +1,247 @@
+---
+layout: presentation
+title: 工具准备
+comments: true
+permalink: /prereq/
+---
+# 工具准备
+
+---
+
+# 预先学习
+了解和使用以下各种工具，然后做PPT给大家讲解，尽量简短。
+
+学习思路（[大图](http://knsv.github.io/mermaid/live_editor/#/view/Z3JhcGggTFIKCiAgICBzdWJncmFwaCDln7rmnKzlt6XlhbcKICAgICAgICBzdGFydCgiZmE6ZmEtY2lyY2xlIOW8gOWniyIpIC0tPiBwYXNzd29yZCgiZmE6ZmEta2V5IGxhc3RwYXNzIikKICAgICAgICBwYXNzd29yZCAtLT4gZXZlcm5vdGUo5Y2w6LGhPGJyPueslOiusDxicj4pCiAgICAgICAgZXZlcm5vdGUgLS0-IGNoZWNrQmFzZQogICAgICAgIGNoZWNrQmFzZXsi5bey57uP5LqG6KejIDxici8-IOeslOiusOWKn-iDve-8nyJ9ID09IOaYryA9PT4gZXhjZWwoIkV4Y2VsIE9ubGluZSIpCiAgICAgICAgY2hlY2tCYXNlIC0tIOWQpiAtLT4gZXZlcm5vdGUgICAgICAgCiAgICBlbmQKICAgIHBhc3N3b3JkIC0uLT4gcmVhZEZ1cnRoZXIKICAgIGV2ZXJub3RlIC0uLT4gcmVhZEZ1cnRoZXIgCiAgICBleGNlbCAtLT4gZ2l0b3NjCiAgICBleGNlbCAtLi0-IHRoaW5rCiAgICAKCiAgICBzdWJncmFwaCDniYjmnKznrqHnkIYKICAgICAgICBnaXRvc2MoImZhOmZhLWdpdCDkuobop6NnaXTkuI5naXRvc2MiKSAtLT4gZm9yaygiZmE6ZmEtY29kZS1mb3JrIOWfuuacrOeahFB1c2gmUHVsbCIpCiAgICAgICAgZ2l0b3NjIC0tPiBnaXRodWIoImZhOmZhLWdpdGh1YiDms6jlhozkvb_nlKhHaXRodWIiKQoKCiAgICBlbmQKICAgIGdpdG9zYyAtLi0-IHJlYWRGdXJ0aGVyCiAgICBnaXRodWIgLS4tPiByZWFkRnVydGhlcgoKCiAgICBzdWJncmFwaCDliIbkuqvlkozkv6Hmga8KICAgICAgICBub3RlKCJmYTpmYS1zdGlja3ktbm90ZS1vIOS9v-eUqOWNsOixoeeslOiusOWBmueslOiusCIpCiAgICAgICAgaG9zdHMgLS0-IExhbnRlcm4KICAgICAgICBMYW50ZXJuIC0tPiBWUE4KICAgICAgICBWUE4gLS0-IEdvb2dsZQogICAgICAgIExhbnRlcm4gLS0-IGdkb2NzKCJHb29nbGUgRG9jcyIpCiAgICAgICAgV294CiAgICAgICAgV29sZnJhbQogICAgICAgIFN0YWNrb3ZlcmZsb3cKICAgIGVuZAogICAgbm90ZSAtLi0-IGV2ZXJub3RlCgogICAgJSUgaW5lcm1lZGlhdGUgdGhpbmdzCiAgICByZWFkRnVydGhlcijpmIXor7tQUFTkuK3liJflh7rnmoQ8YnI-5ouT5bGV6ZiF6K-75p2Q5paZKSAKICAgIHJlYWRGdXJ0aGVyIC0tPiB0aGluayjmgJ3ogIPnm7jlhbPlupTnlKgpCgogICAgJSUgU3R5bGUKICAgICBjbGFzc0RlZiBncmVlbiBmaWxsOiM5ZjYsc3Ryb2tlOiMzMzMsc3Ryb2tlLXdpZHRoOjJweDsKICAgICBjbGFzc0RlZiBvcmFuZ2UgZmlsbDojZjk2LHN0cm9rZTojMzMzLHN0cm9rZS13aWR0aDo0cHg7CiAgICAgY2xhc3MgdGhpbmssc3EsZSBncmVlbgogICAgIGNsYXNzIHN0YXJ0LHJlYWRGdXJ0aGVyLGNoZWNrQmFzZSBvcmFuZ2U)）：
+
+![roadmap]({{ site.github.url }}/assets/img/20160519/roadmap.svg)
+
+???
+流程源码
+使用了[Mermaid Live Editor](http://knsv.github.io/mermaid/live_editor/)。
+
+[Font Awesome](http://fontawesome.io)也有使用，但是Live Editor加载不出来。
+可以在之后的PPT中画小图。用Impressing.js的说不定也可以。
+
+graph LR
+
+    subgraph 基本工具
+        start("fa:fa-circle 开始") --> password("fa:fa-key lastpass")
+        password --> evernote(印象<br>笔记<br>)
+        evernote --> checkBase
+        checkBase{"已经了解 <br/> 笔记功能？"} == 是 ==> excel("Excel Online")
+        checkBase -- 否 --> evernote       
+    end
+    password -.-> readFurther
+    evernote -.-> readFurther 
+    excel --> gitosc
+    excel -.-> think
+    
+
+    subgraph 版本管理
+        gitosc("fa:fa-git 了解git与gitosc") --> fork("fa:fa-code-fork 基本的Push&Pull")
+        gitosc --> github("fa:fa-github 注册使用Github")
+
+
+    end
+    gitosc -.-> readFurther
+    github -.-> readFurther
+
+
+    subgraph 分享和信息
+        note("fa:fa-sticky-note-o 使用印象笔记做笔记")
+        hosts --> Lantern
+        Lantern --> VPN
+        VPN --> Google
+        Lantern --> gdocs("Google Docs")
+        Wox
+        Wolfram
+        Stackoverflow
+    end
+    note -.-> evernote
+
+    %% inermediate things
+    readFurther(阅读PPT中列出的<br>拓展阅读材料) 
+    readFurther --> think(思考相关应用)
+
+    %% Style
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class think,sq,e green
+     class start,readFurther,checkBase orange
+
+
+---
+## LastPass
+[Lastpass](https://lastpass.com/)是一款在线密码管理与表单填写工具，使网络浏览更为轻松安全。
+
+### 拓展阅读
+* [LastPass – 浏览器的密码管理器](http://www.appinn.com/lastpass/)
+* [LastPass 安全吗？](https://www.zhihu.com/question/20271573)
+* [用什么方式记密码最好？](https://www.zhihu.com/question/24306804)
+* [lastpass 怎么使用更安全？](https://www.zhihu.com/question/23274699)
+
+---
+
+## 印象笔记
+[印象笔记/Evernote](https://www.yinxiang.com/)是一款笔记软件。主要特点：
+
+* 多平台同步：Win/Mac/iOS/Android/Web
+* 可以保存微信、微博文章以及网页
+* 上传总空间无限制，不同级别账户每月有不同的上传流量额度
+* 可以与多种应用连接，作为资料存储中心
+
+---
+
+### 拓展阅读
+* [如何高效使用和整理印象笔记（Evernote）- 知乎](https://www.zhihu.com/question/25852838)
+* [怎么用 Evernote 作知识管理工具？](https://www.zhihu.com/question/20232993)
+* [如何构建自己的笔记系统？](https://www.zhihu.com/question/23427617)
+* [如何建立自己的知识体系？](https://www.zhihu.com/question/19591121)
+* [Evernote、麦库、有道云笔记、天天记事、为知笔记、易趣记事本哪个好？](https://www.zhihu.com/question/20784991)
+* [Evernote 国际版和印象笔记有什么区别？](https://www.zhihu.com/question/20713950)
+
+---
+
+## Excel Online
+
+[Office Online中的Excel Online](https://products.office.com/zh-CN/office-online/documents-spreadsheets-presentations-office-online?omkt=zh-CN)
+
+
+---
+
+## 码云
+[git@osc](http://git.oschina.net/)是国内的基于git的代码托管网站。
+
+### Git的教程（英文版）
+由Codecademy提供的交互式教学，思路清晰、讲解到位：[Learn Git](https://www.codecademy.com/learn/learn-git)
+
+
+### 关于git@osc的教程：
+* [国内代码托管git-osc基础使用教程](http://www.w3cways.com/962.html)
+* [git@oschina使用入门（图形界面版）](http://my.oschina.net/kymjs/blog/188707)
+* [git@osc(git)中team开发、fork和pull request的用法](http://www.07net01.com/blog/git_osc_git_zhongteamkaifa_forkhepull_requestdeyongfa_552830_1375698352.html)
+
+---
+
+## 常用Git命令流程
+1. 首次使用时init->push:
+
+```shell
+# 回到主文件夹，新建文件夹demo并进入文件夹
+cd
+mkdir demo
+cd demo
+# 初始化
+git init
+# 设置远程仓库。用https的地址时要输入账号密码，
+# 用SSH则是进行一些配置后可以免去输入账号密码的过程
+# 地址示例： https://git.oschina.net/domicor/demo.git
+git remote add origin "这里面填你的git地址"
+
+# 然后进行修改
+# 此处用touch新建一个名为README.md的文件
+touch README.md
+# 然后加入修改，最简单的是所有修改都加入，运行以下命令：
+git add --all
+# 然后commit, -m后的引号内的内容可以自己修改
+git commit -m "first commit"
+# 然后提交
+git push origin master
+```
+
+---
+### 首次使用-演示
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#gitinitGif" aria-controls="gitinitGif" role="tab" data-toggle="tab">Gif</a></li>
+    <li role="presentation"><a href="#gitinitVideo" aria-controls="gitinitVideo" role="tab" data-toggle="tab">视频</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="gitinitGif"><a href="http://i.imgur.com/Xb736us.png"><img src="http://i.imgur.com/Xb736us.png"/></a></div>
+    <div role="tabpanel" class="tab-pane fade" id="gitinitVideo"><a href="https://asciinema.org/a/46207" target="_blank"><img src="https://asciinema.org/a/46207.png" width="654"/></a></div>
+  </div>
+
+</div>
+
+
+
+---
+2. 远程已有clone->push:
+
+---
+3. pull发现冲突git merge --no-ff
+
+---
+
+## Github
+[Github](https://github.com/)是世界上最大最活跃的开源项目社区。
+
+### 拓展阅读
+* [怎样使用 GitHub？](https://www.zhihu.com/question/20070065)
+* [百度、阿里、腾讯之类的大公司用 Git 吗？他们如何管理源代码？](https://www.zhihu.com/question/22438484)
+* [哪些项目的源代码最值得阅读？](https://www.zhihu.com/question/19589485)
+* [如何更有效地学习开源项目的代码？](https://www.zhihu.com/question/19637879)
+* [GitCafe 这样的代码托管网站在国内的前景如何？](https://www.zhihu.com/question/20295926)
+
+---
+
+## 信息
+### Hosts
+
+Hosts就是避开DNS服务器，直接访问域名对应的IP地址。因为Hosts内就是存储域名与IP的对应关系。这样可以解开多数被封网站。但是Youtube等网站因DNS污染太严重，可登陆但是不可观看。针对此情况应使用VPN。Youtube除了娱乐，也会有一些质量很好的教程，是很重要的第一手信息来源。
+
+* [Hosts设置教程-老D博客](http://laod.cn/hosts/2016-google-hosts.html#rd)
+* [Hosts文件可靠来源](https://github.com/racaljk/hosts)
+
+### Lantern
+[Lantern项目主页](https://github.com/getlantern/lantern)。Lantern是HTTP/HTTPS代理，设置后可以正常观看Youtube，以及访问大多数被封网站。
+
+---
+
+### VPN
+[VPN测评站](http://www.so147.com/)，可以在此选择适合自己的VPN。开发安卓时最好能用VPN，因为Android
+Studio的更新源是谷歌的，经常被墙。
+
+---
+
+
+### 文件快速查找
+[Wox](https://github.com/Wox-launcher/Wox)是Windows下开源免费强大的快捷启动器辅助工具，可以快速高效率打开软件/搜索文件。
+[教程](http://www.iplaysoft.com/wox.html)
+
+### Google Docs
+在配置Hosts之后即可使用[Google Docs](https://docs.google.com/)
+
+---
+### 打字音效 Tcickeys
+[Tcickeys](http://www.yingdev.com/projects/tickeys)可以让你的打字具有音效。
+有兴趣可以使用。支持Win/Mac/Linux。[Mac项目地址](https://github.com/yingDev/Tickeys)
+
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTI3NDM3NDA2MA==" frameborder=0 allowfullscreen></iframe>
+
+---
+
+### 快捷数学运算
+可使用[WolframAlpha](http://www.wolframalpha.com)快速作出函数图像以及求积分导数等。
+此处使用[MathJax](https://www.mathjax.org/)显示公式。
+
+例如`\int_a^bf(x)dx`用于计算 `\(\int_a^bf(x)dx\)`
+
+又例如`y = x^2`可以用于计算：
+
+$$ y = x^2 $$
+
+
+---
+
+### Google
+需要使用Lantern做HTTP/HTTPS代理。然后可访问日本的google,
+默认搜索结果为日语。可设置为英文。
+
+### stackoverflow
+[Stackoverflow](http://stackoverflow.com/)程序员问答社区。编程问题优先在此查找。
+

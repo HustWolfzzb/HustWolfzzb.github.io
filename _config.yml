@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 迅睿尔训练站
+email: hustlionm@qq.com
+description: > # this means to ignore newlines until "baseurl:"
+  这里提供迅睿尔团队的训练资料。目前由软件组Hustlion维护。
+baseurl: /sandrial-starter # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username:  HustLion
+
+# disqus
+# disqus_shortname: sandrialtraining
+# disqus_url: "http://hustlion.github.io/sandrial-starter"
+# use duoshuo for this Chinese site
+duoshuo_shortname: sandrialtraining
+duoshuo_url: "http://hustlion.github.io/sandrial-starter"
+# Build settings
+markdown: kramdown

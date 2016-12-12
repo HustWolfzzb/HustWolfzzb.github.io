@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <scrpt type="text/javascript" src="{{ "/js/jquery-2.2.3.min.js" | prepend: site.baseurl }}"></scrpt>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/bootstrap-3.3.6.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/index.css" | prepend: site.baseurl }}">
+  <scrpt type="text/javascript" src="{{ "/js/bootstrap-3.3.6.min.js" | prepend: site.baseurl }}"></scrpt>
+  <link rel="stylesheet" type="text/css" href="{{ "/css/monokai_sublime.min.css" | prepend: site.baseurl }}">
+  <!-- <scrpt type="text/javascript" src="{{ "/js/highlight.min.js" | prepend: site.baseurl }}"></scrpt> -->
+  <scrpt type="text/javascript" src="{{ "/js/index.js" | prepend: site.baseurl }}"></scrpt>
+  <!-- <script>hljs.initHighlightingOnLoad();</script> -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+</head>
