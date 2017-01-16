@@ -49,7 +49,7 @@
 
  >本学期由于学业以及团队工作，所以很多的学习都束手束脚，所以寒假要好好开始学习积累了。另外，《算法导论》、《计算机组成原理》、《计算机网络技术》、《操作系统》这四门计算机类大课的慕课，我要学完，阿西吧~~~
 
-![中国大学MOOC]WEY26YQO3HM7.jpg](http://upload-images.jianshu.io/upload_images/3810775-56b879d2c44d6a8d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![中国大学MOOC](http://upload-images.jianshu.io/upload_images/3810775-56b879d2c44d6a8d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
